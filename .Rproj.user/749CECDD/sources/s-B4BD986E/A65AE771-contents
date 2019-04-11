@@ -1,4 +1,4 @@
-addpercentCoverage = function(D,minNumSpeciesWithImages=20,Step=1000,maxPages=2,globalOnly=FALSE) {
+addPercentCoverage = function(D,minNumSpeciesWithImages=20,Step=1000,maxPages=2,globalOnly=FALSE) {
   D = D %>%
     group_by(friendlyName,friendlyKey,basisOfRecord,country,license) %>%
     summarise(numSpeciesWithImages = n()) %>%

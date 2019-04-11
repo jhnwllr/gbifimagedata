@@ -1,11 +1,11 @@
 
 # add the world percentage
 
-addWorldPercentage = function(D) {
+addWorldPercentage = function(D,Rank="SPECIES") {
 
   friendlyKey = D$friendlyKey %>% unique()
 
-  worldCount = httr::GET("http://api.gbif.org/v1/species/search?rank=SPECIES&status=ACCEPTED&highertaxon_key=" %+% friendlyKey) %>%
+  worldCount = httr::GET("http://api.gbif.org/v1/species/search?rank=" %+% Rank %+% "&status=ACCEPTED&highertaxon_key=" %+% friendlyKey) %>%
     httr::content() %>%
     pluck("count")
 

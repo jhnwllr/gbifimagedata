@@ -1,6 +1,6 @@
 # get the occurrence image data. Could probably be turned into a download
 
-getImageData = function(friendlyName = "Frogs",friendlyKey = "952",Rank="SPECIES",Step=10,maxPages=2) {
+getImageData = function(friendlyName = "Frogs",friendlyKey = "952",Step=10,maxPages=2) {
 
   totalCount = GET("http://api.gbif.org/v1/occurrence/search?media_type=StillImage&taxon_key=" %+% friendlyKey) %>%
     content() %>%
@@ -65,8 +65,7 @@ getImageData = function(friendlyName = "Frogs",friendlyKey = "952",Rank="SPECIES
     basisOfRecord=basisOfRecord,
     license=licenseList,
     publisher=publisher,
-    countryCode=countryCode) %>%
-    filter(rank == !!Rank)
+    countryCode=countryCode)
 
   return(imageData)
 }
