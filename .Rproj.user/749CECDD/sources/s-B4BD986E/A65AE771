@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554886829714.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A65AE771",
+    "lastKnownWriteTime" : 1554968687,
+    "last_content_update" : 1554968687616,
+    "path" : "C:/Users/ftw712/Desktop/gbifimagedata/R/addpercentCoverage.R",
+    "project_path" : "R/addpercentCoverage.R",
+    "properties" : {
+        "cursorPosition" : "25,11",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554903198028.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4146012275",
+    "id" : "2B1A4180",
+    "lastKnownWriteTime" : 1554969274,
+    "last_content_update" : 1554969274329,
+    "path" : "C:/Users/ftw712/Desktop/gbifimagedata/R/addWorldPercentage.R",
+    "project_path" : "R/addWorldPercentage.R",
+    "properties" : {
+        "cursorPosition" : "7,110",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554885271651.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8A9FDB64",
+    "lastKnownWriteTime" : 1554970823,
+    "last_content_update" : 1554970823724,
+    "path" : "C:/Users/ftw712/Desktop/gbifimagedata/R/summariseTable.R",
+    "project_path" : "R/summariseTable.R",
+    "properties" : {
+        "cursorPosition" : "27,35",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
