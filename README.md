@@ -60,7 +60,7 @@ Since we only dowloaded 30 records, this table will be not very useful.
 
 ```
 
-## Real example
+## Real example (Frogs)
 
 Below I do a real analysis: 
 
@@ -202,4 +202,4 @@ arrange(-percentCoverage,license)
 ```
 
 * 64% of ants have 1 or more images (preserved specimen)
-* Only 1% of ants have allow for commercial useage 
+* Only 1% of ants have allow for commercial use (preserved specimen)
