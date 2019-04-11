@@ -108,8 +108,8 @@ This should produce a table looking close to this:
 
 ```
 
-* 23% frogs have 1 image or more (preserved specimen)
-* 13% allow for commercial use (preserved specimen)
+* 23% of frog species have 1 image or more (preserved specimen)
+* 13% of frog species allow for commercial use (preserved specimen)
 
 # TODO 
 
@@ -155,7 +155,7 @@ arrange(-percentCoverage,license)
 ```
 
 * %53 of hummingbirds have at least 1 image (human obs)
-* %23 allow for commercial usage (human obs)
+* %23 of hummingbirds species allow for commercial usage (human obs)
 
 # Ants analysis 
 
@@ -202,4 +202,4 @@ arrange(-percentCoverage,license)
 ```
 
 * 64% of ants have 1 or more images (preserved specimen)
-* Only 1% of ants have allow for commercial use (preserved specimen)
+* Only 1% of ants species allow for commercial use (preserved specimen)
