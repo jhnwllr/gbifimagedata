@@ -47,6 +47,10 @@ getImageData = function(friendlyName = "Frogs",friendlyKey = "952",Step=10,maxPa
     map(~ .x$taxonRank) %>%
     flatten_chr()
 
+  taxonomicStatus = occList %>%
+    map(~ .x$taxonomicStatus) %>%
+    flatten_chr()
+
   # Get the license of the photo
   # licenseList = occKey %>% map(~ GET("https://api.gbif.org/v1/occurrence/" %+% .x) %>% content()) %>%
   licenseList = occList %>%
@@ -62,6 +66,7 @@ getImageData = function(friendlyName = "Frogs",friendlyKey = "952",Step=10,maxPa
     friendlyName=friendlyName,
     taxonKey=taxonKey,
     rank = rank,
+    taxonomicStatus = taxonomicStatus,
     basisOfRecord=basisOfRecord,
     license=licenseList,
     publisher=publisher,

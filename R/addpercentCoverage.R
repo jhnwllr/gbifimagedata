@@ -1,8 +1,10 @@
-addPercentCoverage = function(D,minNumSpeciesWithImages=20,Step=1000,maxPages=2,globalOnly=FALSE) {
-  D = D %>%
-    group_by(friendlyName,friendlyKey,basisOfRecord,country,license) %>%
-    summarise(numSpeciesWithImages = n()) %>%
-    filter(numSpeciesWithImages > !!minNumSpeciesWithImages)
+addPercentCoverage = function(D,Step=1000,maxPages=2,globalOnly=FALSE) {
+
+  # this part could probably be moved to another processing step.
+    # D = D %>%
+    # group_by(friendlyName,friendlyKey,basisOfRecord,country,license) %>%
+    # summarise(numSpeciesWithImages = n()) %>%
+    # filter(numSpeciesWithImages >= !!minNumSpeciesWithImages)
 
   if(!globalOnly) {
 
