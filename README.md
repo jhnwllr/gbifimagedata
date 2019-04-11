@@ -115,7 +115,7 @@ This should produce a table looking close to this:
 
 * make work for GENUS level or higher
 * lists of taxonKeys. 
-* make other groupings easier 
+* make total group for basisOfRecord 
 
 # Hummingbirds analysis
 
@@ -157,3 +157,49 @@ arrange(-percentCoverage,license)
 * %53 of hummingbirds have at least 1 image (human obs)
 * %23 allow for commercial usage (human obs)
 
+# Ants analysis 
+
+[ant images on GBIF](https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=4342&advanced=1)
+
+```
+library(gbifimagedata)
+library(dplyr)
+
+saveDir = "C:/Users/ftw712/Desktop/image data friendly taxa/data/ants/"
+
+getImageData(friendlyName="ants",friendlyKey="4342",Step=100,maxPages=2000) %>% 
+saveData(saveDir,fileName="imageData.rda") %>% # save the data from the most expensive step
+loadData(saveDir=saveDir,fileName="imageData.rda") %>% # load that data from disk
+filter(taxonomicStatus == "ACCEPTED") %>% # get only ACCEPTED species
+filter(rank == "SPECIES") %>% # only get for Rank SPECIES
+addLicenseTranslation() %>%
+summariseTable() %>%
+filter(imageCount >= 1) %>% # only get species with more than n images
+groupSummarise() %>%
+filter(country == "world") %>% 
+addPercentCoverage(globalOnly=TRUE) %>%
+addWorldPercentage() %>% # adds through a different api
+select(friendlyName,country,basisOfRecord,license,percentCoverage) %>%  
+arrange(-percentCoverage,license)
+```
+
+
+```
+   friendlyName country basisOfRecord     license                percentCoverage
+   <chr>        <chr>   <chr>             <chr>                            <dbl>
+ 1 ants         world   PRESERVED_SPECIM~ total                           61.4  
+ 2 ants         world   PRESERVED_SPECIM~ only non-commercial u~          61.2  
+ 3 ants         world   HUMAN_OBSERVATION total                            5.00 
+ 4 ants         world   HUMAN_OBSERVATION only non-commercial u~           4.64 
+ 5 ants         world   HUMAN_OBSERVATION commercial use allowed           1.74 
+ 6 ants         world   PRESERVED_SPECIM~ commercial use allowed           1.13 
+ 7 ants         world   UNKNOWN           total                            1.13 
+ 8 ants         world   UNKNOWN           only non-commercial u~           1.01 
+ 9 ants         world   FOSSIL_SPECIMEN   total                            0.489
+10 ants         world   FOSSIL_SPECIMEN   only non-commercial u~           0.407
+11 ants         world   FOSSIL_SPECIMEN   commercial use allowed           0.230
+12 ants         world   UNKNOWN           commercial use allowed           0.141
+```
+
+* 64% of ants have 1 or more images (preserved specimen)
+* Only 1% of ants have allow for commercial useage 
